@@ -1,0 +1,7 @@
+# Secretos de Supabase — valores reales SOLO en .env (local). Nunca se suben.
+.env
+
+# Sesión del agente y temporales
+.opencode/
+__pycache__/
+*.py[cod]

@@ -1,0 +1,55 @@
+{
+  "id": "akapellah",
+  "nombre": "AKAPELLAH",
+  "estilo": "Improvisación Pura / Daño Crítico",
+  "color": "#ff2bd6",
+  "barras": {
+    "ataque": [
+      "Gózalo que tu marío está preso, pero no me abarcas ni me das beso, tú mi jeva, no hay tiempo pa' eso.",
+      "Yo solo quería mostrar mis rimas cuando comencé rapeando en las camioneticas que iban para mi pueblo.",
+      "Ninguna hazaña sabe dulce sin esfuerzo, pero con malas mañas avanzas el proceso, pero con los años se vuelve inverso.",
+      "Represento a la nueva era y no a las gorras, en contra de amigos falsos que se juntan con uno por lo que tengo.",
+      "Te acuso públicamente de apropiación de cultura, ¿porque Atrévete era pa' mover cintura y un día te crees el don de la escritura?",
+      "Ya tomé el control, es el hampa, ni por qué venga Shenlong y renazcas, vengo a dar nivel, solo cierra tus ojos, respira profundo y vacílate el beat."
+    ],
+    "aura": [
+      "Gordo funky",
+      "Profesor",
+      "Maracay"
+    ],
+    "proteccion": [
+      "Y ahora vuelo como Mario comiendo hongo y montando dinosaurio subiendo rango."
+    ],
+    "buster": [
+      "Voy pa' 30, se fueron los 20\nEs necesario que me concentre\nVoy pendiente, me engorda la cuenta\nPa' dejarle una herencia a mi descendiente"
+    ],
+    "plagio": {
+      "fuente": "plagio.json"
+    }
+  },
+  "assets": {
+    "select": "Modelos/personajes/akapellah/aka selection.png",
+    "power": "Modelos/personajes/akapellah/aka pw.png",
+    "combateLoop": "Modelos/personajes/akapellah/akamove.mp4",
+    "combateKey": true,
+    "burstLoop": "Modelos/personajes/akapellah/akaburst.mp4",
+    "burstKey": true,
+    "intro": [
+      "Modelos/personajes/akapellah/akapela animado.webm",
+      "Modelos/personajes/akapellah/akapela animado recorte.mp4"
+    ],
+    "introAudio": {
+      "src": "Modelos/personajes/akapellah/akasonido.mp3",
+      "desde": 0,
+      "hasta": 6
+    },
+    "poses": [
+      "Modelos/personajes/akapellah/aka pose 1.png",
+      "Modelos/personajes/akapellah/aka pose 2.png",
+      "Modelos/personajes/akapellah/aka pose 3.png",
+      "Modelos/personajes/akapellah/aka pose 4.png",
+      "Modelos/personajes/akapellah/aka pose 5.png",
+      "Modelos/personajes/akapellah/aka pose 6.png"
+    ]
+  }
+}

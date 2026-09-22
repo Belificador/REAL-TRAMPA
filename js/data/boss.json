@@ -1,0 +1,67 @@
+{
+  "id": "canserbero",
+  "nombre": "Canserbero",
+  "fases": {
+    "1": {
+      "nombre": "Normal",
+      "barra": [
+        "Perros tratando de invadir mi propiedad privá' mientras dormía\nBuscando robar mis hembras, mis reales, mi comía'",
+        "No toleran que la gente no haga lo que ellos quieran\nY amenazan como buen bruto cuando se desespera",
+        "Hoy, voy a convertirme en un criminal, ya no creo en nadie\nA menos que me convierta en un muerto",
+        "Y lo peor es que yo te conozco tanto\nQue podría recordarte quien eres por si lo olvidas\nY lo peor del caso es que de ti sé tanto\nQue podría dictar clases intensivas de tu vida",
+        "De respeto se trata\nPisotear, pisotear el cadáver de aquellas ratas que aún no acatan\nNormas establecidas por los rebeldes de sangre verde\nQue hierve cada vez que el loop se devuelve",
+        "La vida es un viaje, no una estación\nSaca tu memoria de esa prisión\nTu vida es una película que ahorita es que comienza\nAsí que luces, cámara y acción"
+      ],
+      "poses": [
+        "Modelos/personajes/canserbero/pose 1 can.png",
+        "Modelos/personajes/canserbero/pose can 2.png",
+        "Modelos/personajes/canserbero/pose can 3.png",
+        "Modelos/personajes/canserbero/pose can 4.png",
+        "Modelos/personajes/canserbero/pose can 5.png",
+        "Modelos/personajes/canserbero/pose can 6.png"
+      ]
+    },
+    "2": {
+      "nombre": "Monstruo Lírico",
+      "barra": [
+        "Como cientos de dominoes en fila\nCuando algún dedo al primero derriba\nComo una casa hecha con cartas alta\nHasta que una tormenta sopla su puerta de forma agresiva",
+        "Sean bienvenidos todos a un mundo mental\nPor mí creado y que por hoy los pienso dejar pasar\nEs Tyrone y Can, la peor pesadilla de cierta gente\nAl que detestan comúnmente por pensar diferente",
+        "Y con una coraza va, va, va, y todo en blanco y negro ve, ve, ve\nEn un espejo un día lo vi, y me dijo con su voz\n¡Booh! ¿Qué tal es verte a mi?",
+        "No vale la pena vengarse por algo que no valga la pena\nLa vida es corta y la pena es larga, cuando esta llega",
+        "Estos malditos mediocres de mierda, de pana, ya me tienen harto\nEstán buscando que les monte una dictadura como Castro",
+        "Es tan brutal, algo natural de mis cromosomas\nUn Tyrito y un Canserbero matándose en mis neuronas"
+      ],
+      "poses": [
+        "Modelos/personajes/canserbero/pose can 7.png",
+        "Modelos/personajes/canserbero/pose can 8.png",
+        "Modelos/personajes/canserbero/Pose can 9.png",
+        "Modelos/personajes/canserbero/Pose can 10.png",
+        "Modelos/personajes/canserbero/pose can 11.png",
+        "Modelos/personajes/canserbero/pose can 12.png"
+      ]
+    }
+  },
+  "mitigacion": [
+    "Sé que te arrecha ver como te aplasto sin poder hacer nada\nEs un susurro, zumbando, que no te deja dormir\nY cuando vas a salir está sonando el tema que te emburro",
+    "Y un millón de zonas under donde se bate el casabe, ¿sabe?\nMuchos dicen que estoy loco, y tal vez un poco\nA veces pienso tengo un mecanismo inmenso dentro del coco",
+    "Todos con la misma coba, más brujas que las de las escobas\nComo las Odas de Neruda o como tabacos de Cuba\nEspecial es mi rap como una supernova"
+  ],
+  "assets": {
+    "fase1": "Modelos/personajes/canserbero/canserbero trans.png",
+    "fase2": "Modelos/personajes/canserbero/canserbero2 trans.png",
+    "combateLoop": {
+      "1": {
+        "src": "Modelos/personajes/canserbero/canmove.mp4",
+        "flip": true,
+        "recorteFin": 1,
+        "chroma": { "tipo": "croma", "verdeMin": 20, "verdeMax": 60, "sueloG": 55, "despill": 0.45 }
+      },
+      "2": {
+        "src": "Modelos/personajes/canserbero/canmove2.mp4",
+        "flip": true,
+        "recorteFin": 1,
+        "chroma": { "tipo": "croma", "verdeMin": 20, "verdeMax": 60, "sueloG": 55, "despill": 0.45 }
+      }
+    }
+  }
+}

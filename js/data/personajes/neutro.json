@@ -1,0 +1,56 @@
+{
+  "id": "neutro",
+  "nombre": "Neutro Shorty",
+  "estilo": "Trap Callejero / Alta Resistencia",
+  "color": "#3ddc55",
+  "barras": {
+    "ataque": [
+      "Gastando miles y miles en putas más que en proyectiles, los viernes le compro 20 gramos al dealer.",
+      "Tengo unos secuaces boletas que tienen instinto homicida, estos estúpidos creen que no van a perder la vida.",
+      "Crees que porque soy rapero voy a tener miedo pa' darte coquero, no importa si soy artista te jodo en la pista llórenlo por ñero.",
+      "Guarda mi número por si en la noche estás triste y sigues...",
+      "Vives en un rancho casi pegado al sol, pero aún así no eres humilde y dices que eres la mejor.",
+      "¿Estás viendo sapo que la vida no es un vacilón? Tu ganador y yo pelando bolas, eso 'e un jamón."
+    ],
+    "aura": [
+      "Trap Money",
+      "Calígulas",
+      "Gang gang"
+    ],
+    "proteccion": [
+      "Dejo que se la vacilen, bajo la cama tengo los misiles; mi cuadra está fría, nadie tumba estos carriles."
+    ],
+    "buster": [
+      "Falsos amigos me estrecharon la mano diciendo 'hermano', pero el dinero demostró quién era el profano."
+    ],
+    "plagio": {
+      "fuente": "plagio.json"
+    }
+  },
+  "assets": {
+    "select": "Modelos/personajes/neutro/neutro selection.png",
+    "intro": [
+      "Modelos/personajes/neutro/neutro animado select.webm",
+      "Modelos/personajes/neutro/neutro animado select recorte.mp4"
+    ],
+    "introAudio": {
+      "src": "Modelos/personajes/neutro/neutro_select.mp3",
+      "desde": 7
+    },
+    "power": "Modelos/personajes/neutro/neutro pw.png",
+    "combateLoop": "Modelos/personajes/neutro/neutromove.mp4",
+    "combateKey": true,
+    "burstLoop": "Modelos/personajes/neutro/neutro_burst.mp4",
+    "burstKey": true,
+    "burstRecorteFin": 1,
+    "combateRecorteFin": 1,
+    "poses": [
+      "Modelos/personajes/neutro/neutro pose 1.png",
+      "Modelos/personajes/neutro/neutro pose 2.png",
+      "Modelos/personajes/neutro/Neutro pose 3.png",
+      "Modelos/personajes/neutro/neutro pose 4.png",
+      "Modelos/personajes/neutro/neutro pose 5.png",
+      "Modelos/personajes/neutro/Neutro pose 6.png"
+    ]
+  }
+}

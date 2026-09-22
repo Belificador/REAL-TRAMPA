@@ -1,0 +1,54 @@
+{
+  "id": "lilsupa",
+  "nombre": "Lil Supa",
+  "estilo": "Boombap Consciente / Precisión Milimétrica",
+  "color": "#00f0ff",
+  "barras": {
+    "ataque": [
+      "Si quieren un buen show primero paguen cash...",
+      "Reconozco ser el ser más complicado que conozco, estoy en constante desacuerdo con mi entorno.",
+      "Llegó Mista Uanteik con el peso de la vieja escuela, flow de calle que te enseña y te modela.",
+      "Huele a spray cuando tengo el mic, you know what I'm about, ¡el orgullo del underground!",
+      "Permíteme ganar una copa del mundo como permitiste a Zizou, quiero encender una vela con solo verla.",
+      "Aquí la palabra es una virtud, el hood te da respeto, seriedad y aptitud."
+    ],
+    "aura": [
+      "Yoyo Dojo",
+      "Rap de conciencia",
+      "Mantén el estilo"
+    ],
+    "proteccion": [
+      "Déjame ver la luz, God, déjame verla, yo solo quiero la luz."
+    ],
+    "buster": [
+      "Mi léxico es el lienzo donde pinto mis verdades, sin necesidad de coros ni de falsas amistades."
+    ],
+    "plagio": {
+      "fuente": "plagio.json"
+    }
+  },
+  "assets": {
+    "select": "Modelos/personajes/lilsupa/lilsupa selection.png",
+    "intro": [
+      "Modelos/personajes/lilsupa/lilsupa animado.webm",
+      "Modelos/personajes/lilsupa/lilsupa animado.mp4"
+    ],
+    "introVolumen": 0.85,
+    "introAudio": { "src": "Modelos/personajes/lilsupa/supa.mp3", "desde": 7 },
+    "power": "Modelos/personajes/lilsupa/lilsupa pw.png",
+    "combateLoop": "Modelos/personajes/lilsupa/lilsupamove.mp4",
+    "combateKey": true,
+    "combateCrop": { "x": 400, "y": 25, "w": 440, "h": 665 },
+    "burstLoop": "Modelos/personajes/lilsupa/supa_burst.mp4",
+    "burstKey": true,
+    "burstCrop": { "x": 380, "y": 6, "w": 590, "h": 700 },
+    "poses": [
+      "Modelos/personajes/lilsupa/supa pose 1.png",
+      "Modelos/personajes/lilsupa/supa pose 2.png",
+      "Modelos/personajes/lilsupa/supa pose 3.png",
+      "Modelos/personajes/lilsupa/Supa pose 4.png",
+      "Modelos/personajes/lilsupa/supa pose 5.png",
+      "Modelos/personajes/lilsupa/supa pose 6.png"
+    ]
+  }
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REAL TRAMPA</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <script type="importmap">
+  {
+    "imports": {
+      "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <button id="btn-atras" class="boton-atras oculto" type="button">← ATRÁS</button>
+
+  <div class="control-volumen">
+    <label for="volumen">VOL</label>
+    <input id="volumen" type="range" min="0" max="100" step="1" value="50" aria-label="Volumen">
+  </div>
+
+  <section id="capa-lobby" class="capa activa" data-capa="lobby">
+    <div class="panel centro">
+      <h1 class="titulo-juego" data-text="REAL TRAMPA">REAL TRAMPA</h1>
+      <p class="subtitulo">El juego táctico de rap de Venezuela</p>
+      <p class="desafio">La calle busca un nuevo Rey del movimiento ¿Serás tu próximo?</p>
+      <div class="menu">
+        <button id="btn-jugar" class="boton" type="button"><span class="boton-icono" aria-hidden="true">🎤</span>JUGAR</button>
+        <button id="btn-records" class="boton" type="button"><span class="boton-icono" aria-hidden="true">🏆</span>RÉCORDS</button>
+        <button id="btn-como-jugar" class="boton" type="button"><span class="boton-icono" aria-hidden="true">💡</span>CÓMO JUGAR</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="capa-select" class="capa" data-capa="select">
+    <div class="panel">
+      <h2 class="titulo-pantalla">ELIGE TU MC</h2>
+      <div id="lista-personajes" class="cards"></div>
+    </div>
+  </section>
+
+  <section id="capa-pelea" class="capa" data-capa="pelea">
+    <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="Modelos/fondos/escenario pelea.jpg">
+      <source src="Modelos/fondos/escenario%20pelea%20loop.mp4" type="video/mp4">
+    </video>
+    <div class="bg-velo"></div>
+
+    <div class="hud">
+      <div class="hud-jugador">
+        <span id="nombre-jugador" class="hud-nombre">MC</span>
+        <div class="hp-fondo hp-fondo-vida">
+          <div id="hp-jugador" class="hp-relleno hp-verde"></div>
+        </div>
+        <div class="hud-aura">
+          <span class="hud-aura-nombre">AURA</span>
+          <div class="hp-fondo hp-fondo-aura">
+            <div id="aura-bar" class="hp-relleno hp-aura"></div>
+          </div>
+          <span id="aura-porcentaje" class="hud-aura-porcentaje">0%</span>
+        </div>
+      </div>
+
+      <div class="hud-vs">VS</div>
+
+      <div class="hud-boss">
+        <div class="hud-fila-boss">
+          <span id="nombre-boss" class="hud-nombre">Canserbero</span>
+          <span id="fase-boss" class="hud-fase">FASE 1</span>
+        </div>
+        <div class="hp-fondo hp-fondo-vida hp-fondo-boss">
+          <div id="hp-boss" class="hp-relleno hp-rojo"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arena">
+      <div class="combatiente combatiente-jugador">
+        <div id="burbuja-jugador" class="burbuja burbuja-jugador oculto"></div>
+        <div class="sprite-jugador">
+          <img id="img-jugador" alt="Jugador" draggable="false">
+          <video id="video-jugador" class="combatiente-video oculto" autoplay muted loop playsinline preload="auto" draggable="false"></video>
+          <canvas id="canvas-jugador" class="combatiente-video combatiente-canvas oculto"></canvas>
+        </div>
+      </div>
+      <div class="combatiente combatiente-boss">
+        <div id="burbuja-boss" class="burbuja burbuja-boss oculto"></div>
+        <img id="img-boss" alt="Canserbero" draggable="false">
+        <video id="video-boss" class="combatiente-video oculto" autoplay muted loop playsinline preload="auto" draggable="false"></video>
+        <canvas id="canvas-boss" class="combatiente-video combatiente-canvas oculto"></canvas>
+      </div>
+    </div>
+
+    <div class="controles">
+      <div id="zona-barra" class="zona-barra">
+        <p id="barra-texto" class="barra-mostrada">Preparando el escenario...</p>
+        <div id="panel-ataque" class="panel-ataque oculto"></div>
+      </div>
+
+      <div id="acciones" class="acciones">
+        <button id="btn-atacar" class="boton accion" type="button">ATACAR</button>
+        <button id="btn-defender" class="boton accion" type="button">DEFENDER</button>
+        <button id="btn-farmear" class="boton accion" type="button">FARM AURA</button>
+      </div>
+
+      <button id="btn-burst-contextual" class="boton accion accion-burst oculto" type="button">⚡ BURST</button>
+    </div>
+  </section>
+
+  <section id="capa-score" class="capa" data-capa="score">
+    <div class="panel">
+      <h2 class="titulo-pantalla">RÉCORDS</h2>
+      <table id="tabla-score" class="tabla-score">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>MC</th>
+            <th>PUNTOS</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="menu">
+        <button id="btn-volver-score" class="boton" type="button">VOLVER AL LOBBY</button>
+        <button id="btn-jugar-otra" class="boton" type="button">JUGAR DE NUEVO</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="capa-ayuda" class="capa" data-capa="ayuda">
+    <div class="panel ayuda-panel">
+      <h2 class="titulo-pantalla">CÓMO JUGAR A REAL TRAMPA?</h2>
+      <p class="ayuda-intro">Demuestra tu cultura hip-hop, supera las fases y sobrevive a la tarima contra Canserbero en este combate táctico por turnos.</p>
+      <p class="ayuda-sub">Tus opciones en cada turno:</p>
+      <ul class="ayuda-lista">
+        <li><strong>ATACAR:</strong> Se despliegan 3 opciones de rimas: una es la barra real de tu MC y dos son falsas (la Real Trampa). Elige la tuya. Si caes en una letra falsa, Canserbero te pilla al instante, te castiga (-35% de HP) y te deja sin Aura.</li>
+        <li><strong>DEFENDER:</strong> Sueltas tu barra de defensa y bloqueas el ataque: no recibes daño y conservas tu Aura.</li>
+        <li><strong>FARMEAR AURA:</strong> Sueltas una frase de tu banquillo para cargar energía: +25% de Aura, pero el jefe te pega -20% de HP.</li>
+      </ul>
+      <p class="ayuda-burst">⚡️ <strong>EL GOLPE DE AURA (BURST):</strong> Conecta tus rimas y farmea con cabeza para llenar tu medidor al 100%. Actívalo para desatar un golpe definitivo de -40% de la vida de Canserbero. La pose de poder se queda 15 segundos en tarima.</p>
+      <p class="ayuda-cierre">¡Conoce la letra, calcula tus movimientos y domina la calle!</p>
+      <div class="menu">
+        <button id="btn-volver-ayuda" class="boton" type="button">VOLVER</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="overlay-fin" class="overlay oculto">
+    <div class="overlay-panel">
+      <h2 id="fin-titulo" class="fin-titulo">VICTORIA</h2>
+      <p id="fin-detalle" class="fin-detalle"></p>
+      <div id="fin-paso-nombre">
+        <label for="fin-nombre">Tu nombre de MC:</label>
+        <input id="fin-nombre" type="text" maxlength="20" autocomplete="off">
+        <button id="fin-registrar" class="boton" type="button">REGISTRAR PUNTOS</button>
+        <p id="fin-estado" class="fin-estado"></p>
+      </div>
+      <div id="fin-paso-score" class="oculto">
+        <p class="fin-puntuacion">TU PUNTUACIÓN FINAL: <span id="fin-score">0</span></p>
+        <button id="fin-continuar" class="boton" type="button">VER RÉCORDS</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
