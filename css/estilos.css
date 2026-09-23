@@ -386,6 +386,8 @@ html, body {
   font-weight: 900;
   letter-spacing: 0.1em;
   padding: 14px 34px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   border: 2px solid var(--cyber-cyan);
   border-radius: 0;
   background: linear-gradient(180deg, rgba(0, 240, 255, 0.16), rgba(4, 8, 16, 0.72));
@@ -521,6 +523,7 @@ html, body {
 
 #capa-pelea {
   --piso: 88vh;
+  --piso: 88dvh;
   padding: 60px 22px 14px;
   background-position: center bottom;
 }
@@ -557,6 +560,7 @@ html, body {
 .controles {
   width: 100%;
   height: calc(100vh - var(--piso) - 14px);
+  height: calc(100dvh - var(--piso) - 14px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1268,7 +1272,7 @@ html, body {
 }
 
 @media (max-width: 640px) {
-  .arena { grid-template-columns: 1fr; gap: 6px; }
+  .arena { grid-template-columns: 1fr 1fr; gap: 6px; }
   .combatiente-jugador, .combatiente-boss { justify-content: center; }
   .acciones { flex-wrap: wrap; }
   .accion { min-width: 150px; flex: 0 1 auto; }
